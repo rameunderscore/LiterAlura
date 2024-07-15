@@ -31,7 +31,7 @@ public class Principal {
                     1 - Buscar libro por titulo
                     2 - Historial de libros buscados
                     3 - Lista de Autores
-                    4 - Autores vivos por: Año
+                    4 - Autores vivos por: Anhio
                     5 - Buscar por idioma
                     
                     0 - Salir
@@ -52,6 +52,7 @@ public class Principal {
                     break;
                 case 4:
                     mostrarAutoresVivosPorFecha();
+                    break;
                 case 5:
                     mostrarLibrosPorIdioma();
                     break;
@@ -60,6 +61,7 @@ public class Principal {
                     break;
                 default:
                     System.out.println("Opcion invalida");
+                    break;
             }
         }
     }
@@ -188,7 +190,7 @@ public class Principal {
             libroPorIdioma.forEach(n -> System.out.println(
                     "+++++++++ LIBRO +++++++++" +
                             "\nTitulo: " + n.getTitulo() +
-                            "\nIndioma: " + n.getIdiomas() +
+                            "\nIdioma: " + n.getIdiomas() +
                             "\nAutor: " + n.getAutor().stream().map(Autores::getNombreAutor).collect(Collectors.joining()) +
                             "\nNumero de descargas: " + n.getTotalDescargas() +
                             "\n"
